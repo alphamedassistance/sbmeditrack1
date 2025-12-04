@@ -94,7 +94,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Changed to min-height for better mobile scrolling */
             background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             padding: 20px;
             flex-direction: column; /* Stack for install button */
@@ -188,6 +188,53 @@
         .btn-warning:hover {
             background-color: #e68a00;
         }
+
+        /* --- PORTAL LINKS STYLES START --- */
+        /* Color definitions - Adjust these if your app uses different colors */
+        :root {
+            --primary-color: #007bff;   /* Blue hover color */
+            --secondary-color: #6c757d; /* Grey text color */
+            --border-color: #dee2e6;    /* Line separator color */
+        }
+
+        /* Container styling */
+        .portal-links {
+            margin-top: 25px;
+            text-align: left;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Spacing between the two links */
+        .portal-links p {
+            margin: 10px 0;
+        }
+
+        /* Individual Link Styling */
+        .portal-link-item {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        /* Hover Effect */
+        .portal-link-item:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        /* Emoji Icon Styling */
+        .portal-link-item span {
+            font-size: 1.2em;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        /* --- PORTAL LINKS STYLES END --- */
 
         /* Page 2 Styles */
         .page-2 {
@@ -608,6 +655,20 @@
             </div>
             <button class="btn btn-primary" id="login-btn">Login</button>
             <button class="btn btn-warning mt-3" id="enter-code-btn">Enter Code</button>
+
+            <!-- Added Portal Links -->
+            <div class="portal-links">
+                <p>
+                    <a href="https://alphamedassistance.github.io/portalmain/" class="portal-link-item">
+                        <span>🌍</span> click to access web portal
+                    </a>
+                </p>
+                <p>
+                    <a href="https://m.me/61578341193853" target="_blank" rel="noopener noreferrer" class="portal-link-item">
+                        <span>🎧</span> click to request assistance
+                    </a>
+                </p>
+            </div>
         </div>
 
         <!-- PWA Install Button -->
